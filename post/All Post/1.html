@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="darkmode.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            width: 90vw;
+            padding: 20px;
+            margin-top: 10px;
+            text-align: center;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        @media only screen and (max-width: 600px) {
+        img{
+            width: 90%;
+        }
+        }
+        img{
+            width:300px;
+            float: left;
+            padding: 20px;
+        }
+        p{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img src="https://drive.google.com/uc?id=11oQfNFK504v04cR7dwB4E1Wkqi4RmEn9" alt="">
+        <p>উদ্যোগে আমার যাত্রা
+            এক ভাইয়ার কাছে খবর পাই স্বরূপকাঠিতে একটি সমাজসেবী সংগঠনের যাত্রা শুরু হতে যাচ্ছে। যে সংগঠনটি পরিচালনা করবেন স্বপ্নবাজ শিক্ষার্থীরা৷ ভাইয়া বললেন যুক্ত হতে এই কার্যক্রমে। লেখাপড়ার পাশাপাশি এক্সট্রা কারিকুলামের প্রতি ঝোঁক ছোটবেলা থেকেই আর সেই সূত্র ধরেই ভাবলাম হোক কিছু অন্যরকম! 
+            সংগঠনের সদস্য ফরম কালেক্ট করলাম পাশাপাশি কয়েকজন বন্ধুকেও নিয়ে আসলাম সংগঠনে।<br><br> নানা কারণে চাইলেও সেভাবে সময় দিতে পারতাম না। একজন স্টুডেন্ট কি আর সেভাবে সময় বেড় করতে পারে। আমিও পারতাম না, তাই শুরুর দিকের কার্যক্রমে আমার অবদান কমই ছিলো। কম কেনই বা বলব ছিলো না বললেই চলে। তবে সর্বদা একটা ইচ্ছে ছিলোই যতটুকু সময় পাব মানুষের কল্যাণের কথা মাথায় রেখে ''উদ্যোগ'' এর পাশে থাকবো। সে যাত্রায় এসএসসি শেষ হতে না হতেই নিজেকে উজাড় করে দেওয়ার চেষ্টা করলাম। যাতে সংগঠনের কাজে অবদান রাখতে পারি। জানি না কতটুকু পেরেছি তবে সেই থেকে চেষ্টার কমতি রাখি নি। 
+            উদ্যোগের ১ম প্রতিষ্ঠাবার্ষিকীতে প্রায় ১০০ মানুষকে ফ্রি চিকিৎসা সেবা ও রক্তের গ্রুপ নির্ণয় কর্মসূচি ছিলো উদ্যোগের সাথে আমার প্রথম কর্মকান্ড।<br><br> এমনকি তার পরের কর্মযজ্ঞে আমার থাকা হয়ে ওঠে নি কেননা আমি উচ্চশিক্ষা অর্জনের লক্ষ্যে এলাকার বাহিরে। যদিও ভার্চুয়ালি যতটুকু পারি চেষ্টা চালিয়ে যাচ্ছি। আপনারা জানেন প্রতিটা সংগঠনের প্রচার সম্পাদক ভাইটাল রোল প্লে করে থাকে সেই সংগঠনের জন্য। বর্তমানে উদ্যোগের প্রচার সম্পাদক হিসেবে কাজ করে যাচ্ছি, আমার মতো নগন্য ব্যাক্তিকে এই দায়িত্ব দেওয়ায় সকল সদস্যদের প্রতি কৃতজ্ঞতা। জানি না এই পদের জন্য কতটুকু যোগ্যতা আমার আছে, তবে আপনাদের বিশ্বাসে এগিয়ে চলছি। 
+            উদ্যোগের প্রতি, সংগঠনের প্রত্যেক সদস্যদের প্রতি অগাধ বিশ্বাস রয়েছে তাদের হাত ধরে উদ্যোগ সামনে এগিয়ে যাবে। 
+            <br><br><br>
+            মো: আল-ওয়াসি ইসলাম তালুকদার <br>
+            প্রচার সম্পাদক<br>
+            উদ্যোগ-একটি সামাজিক উন্নয়নমূলক সংগঠন।</p>
+    </main>
+    <script>
+
+
+        //Darkmode//
+        
+        const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+        const body = document.body;
+        
+        // Check if the user's dark mode preference is stored
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            enableDarkMode();
+        }
+        
+        darkModeToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                if (body.classList.contains('dark-mode')) {
+                    disableDarkMode();
+                } else {
+                    enableDarkMode();
+                }
+            });
+        });
+        
+        function enableDarkMode() {
+            body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
+        }
+        
+        function disableDarkMode() {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', 'disabled');
+        }
+        
+        
+        
+        //colour Picker
+        
+        function changeColor(newColor) {
+            document.documentElement.style.setProperty('--color', newColor);
+            localStorage.setItem('mainColor', newColor);
+        }
+        
+        // Check if there is a saved color in local storage and apply it
+        const savedColor = localStorage.getItem('mainColor');
+        if (savedColor) {
+            changeColor(savedColor);
+        }
+        
+        
+        
+            </script>
+</body>
+</html>
